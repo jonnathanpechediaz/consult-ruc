@@ -1,0 +1,48 @@
+// footer
+.newsletter-footer{
+  line-height: 1.2;
+  /*background: lighten('#42a692', 25%);*/
+  &__title{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+  &__body{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  @include media-breakpoint-down(sm){
+    &__body{
+      margin-bottom: 1.2rem;
+      justify-content: center;
+    }
+    &__title{
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+    &__text{
+      width: 100%;
+      margin-top: 1.2rem;
+      text-align: center;
+    }
+    .btn{
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
+
+.footer-bottom{
+  padding: 0.7rem 0;
+  font-size: 85%;
+  text-align: center;
+  background: #111;
+  color: #777;
+}
+
+.footer-inline-nav a {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  position: relative;
+  color: #bfbfbf;
+}

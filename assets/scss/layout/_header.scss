@@ -1,0 +1,73 @@
+.navbar {
+  border-radius: 0;
+  padding: .5rem 1rem;
+  margin: 0;
+}
+
+.navbar-logo{
+  position: relative;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  transition: all 0.4s;
+
+  a.lnk-logo {
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    display: block;
+  }
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.caret-mobile-menu {
+  color: #FFF;
+  width: 40px;
+  height: 40px;
+  margin-left: 14px;
+  background: transparent;
+  border: none;
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+.navbar-reponsive{
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  background: #272a2b;
+  padding: 0 0.7rem;
+  z-index: 1199;
+  overflow-x: hidden;
+  transition: all 0.5s;
+  &.open{
+    bottom: 0;
+    padding: 0.7rem;
+  }
+  ul{
+    padding: 0.5rem 0;
+    margin-bottom: 0;
+    &:not(:last-child){
+      border-bottom: 4px solid rgba(#fff, 0.2);
+    }
+  }
+  .nav-link{
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
